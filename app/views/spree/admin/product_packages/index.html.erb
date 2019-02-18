@@ -34,8 +34,8 @@
           <td><%= package.height %></td>
           <td><%= package.weight %></td>
           <td class="actions actions-2 text-right">
-            <%= link_to_edit(package, no_text: true) %>
-            <%= link_to_delete(package, no_text: true) %>
+            <%= link_to 'Edit' ,"/admin/products/#{@product.slug}/product_packages/#{package.id}/edit", class: "btn btn-primary" %>
+            
           </td>
         </tr>
       <% end %>

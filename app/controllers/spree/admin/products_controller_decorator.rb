@@ -1,6 +1,6 @@
 Spree::Admin::ProductsController.class_eval do
   def product_packages
-    @product = Spree::Product.find_by_slug!(params[:id])
+    @product = Spree::Product.find_by!(slug: params[:id])
     @packages = @product.product_packages
     @product.product_packages.build
 
